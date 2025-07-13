@@ -1,0 +1,258 @@
+:root {
+  --bg-light: #f4f6f9;
+  --bg-dark: #1e1e1e;
+  --text-light: #333;
+  --text-dark: #eee;
+  --card-light: #ffffff;
+  --card-dark: #2c2c2c;
+  --accent: #2c3e50;
+  --accent-dark: #34495e;
+  --input-light: #fff;
+  --input-dark: #333;
+  --button-blue: #3b5998;
+  --button-hover: #2d4373;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+header {
+  background-color: var(--accent);
+  color: white;
+  padding: 40px 60px 20px;
+  position: relative;
+}
+
+/* 🔁 Dark Mode Button Moved to Top Right */
+#dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--button-blue);
+  color: white;
+}
+
+#dark-mode-toggle:hover {
+  background-color: var(--button-hover);
+}
+
+/* 🔁 Logo + Title */
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+  gap: 30px;
+}
+
+.logo {
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.title-text {
+  text-align: center;
+}
+
+.title-text h1 {
+  font-size: 52px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 18px;
+  margin-top: 8px;
+  color: #e0e0e0;
+}
+
+/* 🔁 Mobile Responsive */
+@media (max-width: 768px) {
+  .logo-title {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 160px;
+  }
+
+  .title-text h1 {
+    font-size: 34px;
+  }
+
+  .tagline {
+    font-size: 14px;
+  }
+
+  #dark-mode-toggle {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* Removed .controls section since dark mode moved */
+
+nav#categories {
+  margin: 30px 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 0 20px;
+}
+
+#categories button {
+  background-color: var(--button-blue);
+  color: white;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  flex: 1 1 calc(14.28% - 15px);
+  min-width: 120px;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+}
+
+#categories button.active,
+#categories button:hover {
+  background-color: var(--button-hover);
+}
+
+#search-form {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+}
+
+#search-input {
+  padding: 10px;
+  width: 60%;
+  max-width: 400px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background-color: var(--input-light);
+  color: var(--text-light);
+  outline: none;
+}
+
+body.dark-mode #search-input {
+  background-color: var(--input-dark);
+  color: white;
+}
+
+#search-form button {
+  padding: 10px 15px;
+  border: none;
+  background-color: var(--button-blue);
+  color: white;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+#search-form button:hover {
+  background-color: var(--button-hover);
+}
+
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.news-card {
+  background: var(--card-light);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .news-card {
+  background: var(--card-dark);
+}
+
+.news-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.news-content {
+  padding: 15px;
+}
+
+.news-content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.news-content .date {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.news-content p {
+  font-size: 15px;
+  color: inherit;
+}
+
+.news-content a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--button-blue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news-content a:hover {
+  text-decoration: underline;
+  color: var(--button-hover);
+}
+
+.news-content .source {
+  font-weight: bold;
+  color: #555;
+}
+
+.dark-mode .news-content .source {
+  color: #ccc;
+}
+
+footer {
+  background-color: #e0e0e0;
+  padding: 12px;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 30px;
+}
+
+body.dark-mode footer {
+  background-color: #111;
+  color: white;
+}

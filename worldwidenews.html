@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Worldwide News </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="bglog1.png" alt="Logo" class="logo">
+      <div class="title-text">
+        <h1>Worldwide News </h1>
+        <p class="tagline">Stay updated with real-time trending news globally</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="dark-mode-toggle">🌙 Dark Mode</button>
+    </div>
+
+    <nav id="categories">
+      <button data-category="breaking-news" class="active">Trending</button>
+      <button data-category="business">Business</button>
+      <button data-category="entertainment">Entertainment</button>
+      <button data-category="health">Health</button>
+      <button data-category="science">Science</button>
+      <button data-category="sports">Sports</button>
+      <button data-category="technology">Technology</button>
+    </nav>
+
+    <form id="search-form">
+      <input type="text" id="search-input" placeholder="Search news worldwide...">
+      <button type="submit">🔍</button>
+    </form>
+  </header>
+
+  <main id="news-container"></main>
+
+  <footer>
+    <p>&copy; 2025 News by Jan Mae My Love | Powered by Global News</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
